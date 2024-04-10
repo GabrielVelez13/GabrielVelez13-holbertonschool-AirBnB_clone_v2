@@ -1,11 +1,11 @@
-#!/usr/bin/python3
+#!/user/bin/python3
 from flask import Flask
 """ This opens a basic web app. """
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
+def index():
     return 'Hello HBNB!'
 
 
