@@ -24,5 +24,5 @@ def hbnb():
 
 """ Run the Flask application if this file is executed directly """
 if __name__ == "__main__":
-    app.url_map.strict_slashes=False
+    app.url_map.strict_slashes = False
     app.run(host='0.0.0.0', port=5000)
