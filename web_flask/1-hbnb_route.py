@@ -5,7 +5,7 @@ from flask import Flask
 app = Flask(__name__)
 
 """ Define a route for the root URL ("/") and disable strict slashes """
-@app.route('/', strict_slashes=False)
+@app.route('/')
 def hello_hbnb():
     """
     This function is the route handler for the root URL ("/").
@@ -14,7 +14,7 @@ def hello_hbnb():
     return "Hello HBNB!"
 
 """ Define a route for the "/hbnb" URL and disable strict slashes """
-@app.route('/hbnb', strict_slashes=False)
+@app.route('/hbnb')
 def hbnb():
     """
     This function is the route handler for the "/hbnb" URL.
@@ -24,4 +24,5 @@ def hbnb():
 
 """ Run the Flask application if this file is executed directly """
 if __name__ == "__main__":
+    app.url_map.strict_slashes=False
     app.run(host='0.0.0.0', port=5000)
