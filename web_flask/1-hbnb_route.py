@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" It is cool """
 from flask import Flask
 
 """  Create an instance of the Flask class """
@@ -22,7 +23,7 @@ def hbnb():
     """
     return "HBNB"
 
-""" Run the Flask application if this file is executed directly """
 if __name__ == "__main__":
+    """ Run the Flask application if this file is executed directly """
     app.url_map.strict_slashes = False
     app.run(host='0.0.0.0', port=5000)
