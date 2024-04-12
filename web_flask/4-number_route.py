@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ This version adds route input """
 
-from flask import Flask
+from flask import Flask, abort
 app = Flask(__name__)
 
 
@@ -31,6 +31,14 @@ def python(text):
     text = text.replace('_', ' ')
     return f"Python {text}"
 
+
+@app.route("/number/<n>")
+def number(n: int):
+    if n is not int:
+        abort(404)
+    else:
+        return f"{n} is a number"
+    
 
 if __name__ == "__main__":
     app.url_map.strict_slashes = False
