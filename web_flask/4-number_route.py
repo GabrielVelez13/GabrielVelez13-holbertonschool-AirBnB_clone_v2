@@ -34,6 +34,7 @@ def python(text):
 
 @app.route("/number/<int:n>")
 def number(n):
+    """ Prints a number only if it is whole. """
     return f"{n} is a number"
     
 
