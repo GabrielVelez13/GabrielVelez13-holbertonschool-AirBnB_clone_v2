@@ -32,14 +32,11 @@ def python(text):
     return f"Python {text}"
 
 
-@app.route("/number/<n>")
-def number(n: int):
-    if n is not int:
-        abort(404)
-    else:
-        return f"{n} is a number"
+@app.route("/number/<int:n>")
+def number(n):
+    return f"{n} is a number"
     
 
 if __name__ == "__main__":
     app.url_map.strict_slashes = False
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
