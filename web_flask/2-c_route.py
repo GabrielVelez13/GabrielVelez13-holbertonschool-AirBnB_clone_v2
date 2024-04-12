@@ -7,17 +7,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    """ Prints Hello. """
     return "Hello HBNB!"
 
 
 @app.route("/hbnb")
 def hbnb():
+    """ HBNB """
     return "HBNB"
 
 
 @app.route("/c/<text>")
 def c(text):
-    text = text.replace(',', ' ')
+    """ Prints C plus the text added without _"""
+    text = text.replace('_', ' ')
     return f"C {text}"
 
 
