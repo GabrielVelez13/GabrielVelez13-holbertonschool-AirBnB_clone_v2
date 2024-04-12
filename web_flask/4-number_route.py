@@ -36,7 +36,7 @@ def python(text):
 def number(n):
     """ Prints a number only if it is whole. """
     return f"{n} is a number"
-    
+
 
 if __name__ == "__main__":
     app.url_map.strict_slashes = False
