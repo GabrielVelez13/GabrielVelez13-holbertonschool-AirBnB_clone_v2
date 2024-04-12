@@ -37,10 +37,12 @@ def number(n):
     """ Prints a number only if it is whole. """
     return f"{n} is a number"
 
+
 @app.route("/number_template/<int:n>")
 def numberTemplate(n):
     """ Renders a template. """
     return render_template("5-number.html", n=n)
+
 
 if __name__ == "__main__":
     app.url_map.strict_slashes = False
