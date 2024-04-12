@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" It is cool """
+""" A WebApp that displays different texts depending on route. """
 from flask import Flask
 
-"""  Create an instance of the Flask class """
+
 app = Flask(__name__)
 
-""" Define a route for the root URL ("/") and disable strict slashes """
+
 @app.route('/')
 def hello_hbnb():
     """
@@ -14,7 +14,7 @@ def hello_hbnb():
     """
     return "Hello HBNB!"
 
-""" Define a route for the "/hbnb" URL and disable strict slashes """
+
 @app.route('/hbnb')
 def hbnb():
     """
@@ -22,6 +22,7 @@ def hbnb():
     It returns the string "HBNB" as the response.
     """
     return "HBNB"
+
 
 if __name__ == "__main__":
     """ Run the Flask application if this file is executed directly """
